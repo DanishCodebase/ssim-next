@@ -4,6 +4,7 @@ import Header from "@/pages/Header/Header";
 import Footer from "@/pages/Footer/Footer";
 import QueryProvider from "@/components/QueryProvider";
 import ConditionalBanner from "@/components/ConditionalBanner";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <GoogleTagManager gtmId="GTM-TQZNQ47" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
